@@ -1,9 +1,14 @@
 import requests
 import base64
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class GeminiService:
     def __init__(self):
-        self.API_KEY = "96565cca3262ef86d682243522f70acc3969235e4d8cf055f6116e6f5a4871190b5d988feb254771c46115fc3fd89e52"
+        self.API_KEY = os.getenv("GEMINI_API_KEY")
+        # self.API_KEY = ""
 
     def generate_image(self, prompt, style="No specific style"):
         try:
