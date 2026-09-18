@@ -8,7 +8,6 @@ load_dotenv()
 class GeminiService:
     def __init__(self):
         self.API_KEY = os.getenv("GEMINI_API_KEY")
-        # self.API_KEY = ""
 
     def generate_image(self, prompt, style="No specific style"):
         try:
